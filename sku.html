@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <title>SKU-GENERATOR</title>
+    </head>
+    <body>
+
+  <nav>
+        <h1>Book Nook</h1>
+
+        <ul>
+            <li><a href="index.html">Storefront</a></li>
+            <li><a href="sku.html">SKU Generator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="card">
+
+            <h2>SKU Generator</h2>
+            <p class="subtitle">
+                Generate inventory code for new stock:
+            </p>
+
+            <div class="form-group">
+                <label>Category</label>
+
+                <select id="category">
+                    <option>Fiction</option>
+                    <option>Non-Fiction</option>
+                    <option>Classics</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Book Title</label>
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="e.g. Gatsby">
+            </div>
+
+            <div class="form-group">
+                <label>Stock Quantity</label>
+                <input
+                    type="number"
+                    id="stockQty"
+                    placeholder="e.g. 25">
+            </div>
+
+            <button py-click="make_sku">
+                Generate SKU
+            </button>
+
+            <div class="output" id="skuResult">
+                Your generated SKU will appear here.
+            </div>
+
+        </div>
+    </main>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <title>PROJECT</title>
+    </head>
+    <body>
+<body>
+       <nav>
+        <h1>Book Nook</h1>
+        <ul>
+            <li><a href="index.html">Storefront</a></li>
+            <li><a href="sku.html">SKU Generator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="card">
+
+            <h2>Book Nook Storefront</h2>
+            <p class="subtitle">
+                Select your quantities below:
+            </p>
+
+            <div class="menu-item">
+                <label>The Hunger Games (₱650)</label>
+                <input type="number" id="book1" value="0">
+            </div>
+
+            <div class="menu-item">
+                <label>The Inheritance Games (₱450)</label>
+                <input type="number" id="book2" value="0">
+            </div>
+
+            <div class="menu-item">
+                <label>Releasing 10 (₱760)</label>
+                <input type="number" id="book3" value="0">
+            </div>
+
+            <div class="menu-item">
+                <label>Shatter Me (₱550)</label>
+                <input type="number" id="book4" value="0">
+            </div>
+
+            <button py-click="order">
+                Create Order
+            </button>
+
+            <div class="output" id="result">
+                Your order summary will appear here.
+            </div>
+        </div>
+    </main>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
